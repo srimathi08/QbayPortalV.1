@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://quadrobaytechnologiespvtlim-dev-ed--c.develop.vf.force.com/resource/1689589050000/logo);
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position-x:center;
+    background-position-y:20%;
+    background-color: rgb(255, 255, 255);
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: 75px;
+    border-width:20%;
+
+    
+}
+.slds-card
+{
+    border:none;
+    
+}
+lightning-input
+{
+    font-size: 16px;
+    
+    
+}
+lightning-button
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-card {
+    width: 350px;
+    border:none;
+    padding: 10px;
+
+}
+
+.Head{
+    padding: 20px;
+    display: flex;
+    border:none;
+}
+
+lightning-input{
+    --slds-c-input-radius-border: 3rem;
+    }
+
+
+
+/* .slds-m-top_medium,.slds-p-around_medium
+{
+    background:rgba(0, 0, 0, 0.2);
+} */
+
+:host {
+    display: block;
+}

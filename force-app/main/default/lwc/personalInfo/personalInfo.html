@@ -1,0 +1,60 @@
+<template>
+
+ 
+
+ 
+
+ 
+
+    <!-- <div class="slds-card" title="Timesheet" style="height:550px; width:100%; padding:0%">
+
+ 
+
+ 
+
+ 
+
+        <lightning-card title="Timesheet" icon-name="standard:account">
+
+ 
+
+               <lightning-input type="text" label="Name" onchange={Name}></lightning-input>
+
+ 
+
+ 
+
+ 
+
+               <lightning-input type="text" label="Employee id" onchange={employeeid}></lightning-input>
+
+ 
+               <lightning-input type="date" label="Date" onchange={date}></lightning-input>
+
+ 
+
+ 
+
+               <lightning-input type="text" label="Description" onchange={description}></lightning-input>
+
+ 
+
+           <lightning-button variant="brand" label="Save Record" title="Create New Candidate" onclick={handleClick} ></lightning-button>
+
+
+    </lightning-card>
+
+ 
+
+</div> -->
+
+<lightning-card title="Record with Field Integrity" icon-name="standard:account">
+    <div class="slds-p-around_x-small">
+        <lightning-input label="Name" value={Name} onchange={handleNameChange}></lightning-input>
+        <lightning-input type="Date" label="Date" value={Date} onchange={handleDateChange}></lightning-input>
+        <lightning-input label="Description" value={Description} onchange={handleDesChange}></lightning-input><br/>
+        <lightning-button label="Save" onclick={handleClick}></lightning-button>
+    </div>
+</lightning-card>
+
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <div class="background-container">
+        <div class="image-container">
+            <img src={logo} alt="Background">
+        </div>
+
+        <div class="login-container">
+            <lightning-card title="" class="Head">
+                <h1>
+                    Login
+                </h1> 
+                <div class=""> 
+                    <div class="Sample">
+                    <lightning-input type="text"   label="Username" value={username} onchange={handleUsernameChange}></lightning-input>
+                    <lightning-input type="password" label="Password" value={password} onchange={handlePasswordChange}></lightning-input>
+                </div>
+                    <div class="">
+                        <br>
+                        <lightning-button variant="brand" label="Submit" onclick={navigateToHomePage} ></lightning-button>
+                    
+                    </div> 
+                    <template if:true={error}>
+                        <div class="">
+                            <p class="">{error}</p>
+                        </div>
+                    </template>
+                </div>
+            </lightning-card>
+        </div>
+    </div>
+</template>

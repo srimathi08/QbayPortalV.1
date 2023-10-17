@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Check-In / Check-Out Portal">
+        <div class="slds-p-around_medium">
+            <div>
+                <lightning-button label="Check-In" onclick={checkIn}></lightning-button>
+                <lightning-button label="Check-Out" onclick={checkOut}></lightning-button>
+            </div>
+            <div>
+                <p>Status: {status}</p>
+                <p>Location: {location}</p>
+            </div>
+        </div>
+    </lightning-card>
+</template>

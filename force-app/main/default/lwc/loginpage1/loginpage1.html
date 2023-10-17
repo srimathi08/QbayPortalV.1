@@ -1,0 +1,31 @@
+<template >
+        <div class="background-container">
+            <div class="image-container">
+                <img src={logo} alt="Background">
+            </div>
+    
+            <div class="login-container">
+                <lightning-card title="" class="Head">
+                    <h1>
+                        Login
+                    </h1> 
+                    <div class=""> 
+                        <div class="Sample">
+                        <lightning-input type="text"   label="Username" value={username} class="Validate" onchange={handleUsernameChange} required ></lightning-input>
+                        <lightning-input type="password" label="Password" value={password} name={Password} 
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  onchange={handlePasswordChange} required ></lightning-input>
+                    </div>
+                        <div class="">
+                            <lightning-button variant="brand" label="Submit" onclick={handleLogin}></lightning-button>  
+                    </div>
+                    <template if:true={error}>
+                        <div class="error-message">
+                            <p class="error">{error}</p>
+                        </div>
+                    </template>
+                </div>
+                </lightning-card>
+    
+            </div>
+        </div>
+    </template>

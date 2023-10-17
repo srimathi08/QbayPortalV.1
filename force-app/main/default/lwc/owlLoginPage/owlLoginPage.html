@@ -1,0 +1,21 @@
+<template>
+    <div class="owl">
+      <div class="hand" data-id="hand-l"></div>
+      <div class="hand hand-r" data-id="hand-r"></div>
+      <div class="arms">
+        <div class="arm" data-id="arm-l"></div>
+        <div class="arm arm-r" data-id="arm-r"></div>
+      </div>
+    </div>
+    <div class="form">
+      <div class="control">
+        <lightning-input type="email" data-id="username" placeholder="Username" onclick={handleUsernameIn} onchange={handleUsernameIn} onfocus={handleUsernameIn} onblur={handleUsernameOut} onabort={handleUsernameOut}  ></lightning-input>
+    </div>
+    <div class="control" style="margin-top: -15px; margin-bottom: 10px;">
+    <lightning-input type="password" data-id="password" placeholder="Password" onclick={handlePasswordIn} onchange={handlePasswordIn} onfocus={handlePasswordIn} onblur={handlePasswordOut} onabort={handlePasswordOut} ></lightning-input>
+    </div>
+    <div class="control">
+    <lightning-button type="submit" class="slds-button slds-text-center" variant="netural" label="Login" title="Login" ></lightning-button>
+    </div>
+    </div>
+  </template>

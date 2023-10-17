@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Time Tracker">
+      <div class="slds-p-around_medium">
+        <c-greeting-message name={name}></c-greeting-message>
+        <lightning-button label="Check-In" onclick={handleCheckIn} variant="brand" disabled={isCheckInDisabled}></lightning-button>
+        <lightning-button label="Check-Out" onclick={handleCheckOut} variant="brand" disabled={isCheckOutDisabled}></lightning-button>
+        <p class="slds-p-top_medium">Start Time: {startTime}</p>
+        <p>End Time: {endTime}</p>
+      </div>
+    </lightning-card>
+  </template>

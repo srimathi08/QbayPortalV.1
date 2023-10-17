@@ -1,0 +1,61 @@
+<template>
+    <lightning-card >
+        <!-- title="Pass Port Records" -->
+        <div class="slds-m-around_medium">
+            <template if:true={passportRecords}>
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Name">Name</div>
+                               </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Name_as_per_Passport">Name as per passport</div>
+                               </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="PassPort Number">PassPort Number</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="place of issue">place of issue</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Expired date">Expired date</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Issued date">Issued date</div>
+                            </th>   
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={passportRecords} for:item="record">
+                            <tr key={record.Id}>
+                                <td data-label="Name">
+                                    <div class="slds-truncate" title={record.Name__c}>{record.Name__c}</div>
+                                </td>
+                                <td data-label="Name as per passport">
+                                    <div class="slds-truncate" title={record.Name_as_per_Passport__c}>{record.Name_as_per_Passport__c}</div>
+                                </td>
+                                <td data-label="PassPort Number">
+                                    <div class="slds-truncate" title={record.passport_Number__c}>{record.passport_Number__c}</div>
+                                </td>
+                                <td data-label="place of issue">
+                                    <div class="slds-truncate" title={record.Place_of_Issue__c}>{record.Place_of_Issue__c}</div>
+                                </td>
+                                <td data-label="Expired date">
+                                    <div class="slds-truncate" title={record.Expired_date__c}>{record.Expired_date__c}</div>
+                                </td>
+                                <td data-label="Issued date">
+                                    <div class="slds-truncate" title={record.Issued_date__c}>{record.Issued_date__c}</div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+            <template if:false={passportRecords}>
+                No records found.
+            </template>
+        </div>
+    </lightning-card>
+</template>

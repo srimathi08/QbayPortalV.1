@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Leave__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISPICKVAL( Leave_Type__c , &quot;Sick Leave&quot;),
+    12,
+    IF(
+        ISPICKVAL(Leave_Type__c, &quot;Casual Leave&quot;),
+        12,IF(
+        ISPICKVAL(Leave_Type__c, &quot;Marriage Leave&quot;),
+        7,IF(
+        ISPICKVAL(Leave_Type__c, &quot;Bereavement Leave&quot;),
+        3,IF(
+        ISPICKVAL(Leave_Type__c, &quot;Earned Leave&quot;),
+        20,IF(
+        ISPICKVAL(Leave_Type__c, &quot;Loss Of Pay Leave&quot;),
+        7,IF(
+        ISPICKVAL(Leave_Type__c, &quot;Work From Home&quot;),
+        15,
+        0
+             )
+           )
+         )
+       )
+     )
+   )
+ )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Leave</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
